@@ -31,14 +31,13 @@ int main() {    // Main (runs on core 0)
     // main loop
     while (true) {
         gpio_put(LED_PIN, 1);                       // turn on LED
-        while (gpio_get(BTN_PIN)) { sleep_ms(10); } // wait for button press
+        while (!gpio_get(BTN_PIN)) { sleep_ms(10); } // wait for button press
         gpio_put(LED_PIN, 0);                       // turn off LED
 
         char message[100];                          // ask user for input
         int loops;
         printf("\r\nEnter number 1-100: ", message);
         scanf("%d", &loops);
-        # printf("\r\nYou said %d", loops);
 
         for (loops>0; loops--;) {                    // read and print ADC value
            uint16_t result = adc_read();
