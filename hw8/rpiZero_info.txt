@@ -1,0 +1,6 @@
+OS customization:
+
+hostname: charlierpi.local
+
+username: charlie
+password: charlie
