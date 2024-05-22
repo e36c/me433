@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.29.0/bin/cmake
+CMAKE_COMMAND = "C:/Program Files/CMake/bin/cmake.exe"
 
 # The command to remove a file.
-RM = /opt/homebrew/Cellar/cmake/3.29.0/bin/cmake -E rm -f
+RM = "C:/Program Files/CMake/bin/cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/nickmarchuk/Documents/GitHub/me433_sandbox/hw2
+CMAKE_SOURCE_DIR = C:/Users/Charlie/Documents/GitHub/me433_github/hw3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/nickmarchuk/Documents/GitHub/me433_sandbox/hw2/build
+CMAKE_BINARY_DIR = C:/Users/Charlie/Documents/GitHub/me433_github/hw3/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /Users/nickmarchuk/Documents/GitHub/me433_sandbox/hw2/build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
-	/opt/homebrew/Cellar/cmake/3.29.0/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:/Program Files/CMake/bin/cmake-gui.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/opt/homebrew/Cellar/cmake/3.29.0/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:/Program Files/CMake/bin/cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nickmarchuk/Documents/GitHub/me433_sandbox/hw2/build/CMakeFiles /Users/nickmarchuk/Documents/GitHub/me433_sandbox/hw2/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/Charlie/Documents/GitHub/me433_github/hw3/build/CMakeFiles C:/Users/Charlie/Documents/GitHub/me433_github/hw3/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nickmarchuk/Documents/GitHub/me433_sandbox/hw2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/Charlie/Documents/GitHub/me433_github/hw3/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -156,17 +156,30 @@ bs2_default_padded_checksummed_asm/fast:
 .PHONY : bs2_default_padded_checksummed_asm/fast
 
 #=============================================================================
-# Target rules for targets named PioasmBuild
+# Target rules for targets named tinyusb_pico_pio_usb_usb_tx_pio_h
 
 # Build rule for target.
-PioasmBuild: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PioasmBuild
-.PHONY : PioasmBuild
+tinyusb_pico_pio_usb_usb_tx_pio_h: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tinyusb_pico_pio_usb_usb_tx_pio_h
+.PHONY : tinyusb_pico_pio_usb_usb_tx_pio_h
 
 # fast build rule for target.
-PioasmBuild/fast:
-	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/PioasmBuild.dir/build.make pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/PioasmBuild.dir/build
-.PHONY : PioasmBuild/fast
+tinyusb_pico_pio_usb_usb_tx_pio_h/fast:
+	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/tinyusb/CMakeFiles/tinyusb_pico_pio_usb_usb_tx_pio_h.dir/build.make pico-sdk/src/rp2_common/tinyusb/CMakeFiles/tinyusb_pico_pio_usb_usb_tx_pio_h.dir/build
+.PHONY : tinyusb_pico_pio_usb_usb_tx_pio_h/fast
+
+#=============================================================================
+# Target rules for targets named tinyusb_pico_pio_usb_usb_rx_pio_h
+
+# Build rule for target.
+tinyusb_pico_pio_usb_usb_rx_pio_h: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tinyusb_pico_pio_usb_usb_rx_pio_h
+.PHONY : tinyusb_pico_pio_usb_usb_rx_pio_h
+
+# fast build rule for target.
+tinyusb_pico_pio_usb_usb_rx_pio_h/fast:
+	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/tinyusb/CMakeFiles/tinyusb_pico_pio_usb_usb_rx_pio_h.dir/build.make pico-sdk/src/rp2_common/tinyusb/CMakeFiles/tinyusb_pico_pio_usb_usb_rx_pio_h.dir/build
+.PHONY : tinyusb_pico_pio_usb_usb_rx_pio_h/fast
 
 #=============================================================================
 # Target rules for targets named cyw43_driver_picow_cyw43_bus_pio_spi_pio_h
@@ -195,19 +208,6 @@ blink/fast:
 .PHONY : blink/fast
 
 #=============================================================================
-# Target rules for targets named ELF2UF2Build
-
-# Build rule for target.
-ELF2UF2Build: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ELF2UF2Build
-.PHONY : ELF2UF2Build
-
-# fast build rule for target.
-ELF2UF2Build/fast:
-	$(MAKE) $(MAKESILENT) -f blink/CMakeFiles/ELF2UF2Build.dir/build.make blink/CMakeFiles/ELF2UF2Build.dir/build
-.PHONY : ELF2UF2Build/fast
-
-#=============================================================================
 # Target rules for targets named adc
 
 # Build rule for target.
@@ -233,6 +233,19 @@ cdc/fast:
 	$(MAKE) $(MAKESILENT) -f cdc/CMakeFiles/cdc.dir/build.make cdc/CMakeFiles/cdc.dir/build
 .PHONY : cdc/fast
 
+#=============================================================================
+# Target rules for targets named hw3
+
+# Build rule for target.
+hw3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hw3
+.PHONY : hw3
+
+# fast build rule for target.
+hw3/fast:
+	$(MAKE) $(MAKESILENT) -f hw3/CMakeFiles/hw3.dir/build.make hw3/CMakeFiles/hw3.dir/build
+.PHONY : hw3/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -241,15 +254,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... ELF2UF2Build"
-	@echo "... PioasmBuild"
 	@echo "... bs2_default_bin"
 	@echo "... bs2_default_padded_checksummed_asm"
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
+	@echo "... tinyusb_pico_pio_usb_usb_rx_pio_h"
+	@echo "... tinyusb_pico_pio_usb_usb_tx_pio_h"
 	@echo "... adc"
 	@echo "... blink"
 	@echo "... bs2_default"
 	@echo "... cdc"
+	@echo "... hw3"
 .PHONY : help
 
 

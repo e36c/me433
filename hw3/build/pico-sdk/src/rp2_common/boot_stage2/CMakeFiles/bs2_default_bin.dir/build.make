@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.29.0/bin/cmake
+CMAKE_COMMAND = "C:/Program Files/CMake/bin/cmake.exe"
 
 # The command to remove a file.
-RM = /opt/homebrew/Cellar/cmake/3.29.0/bin/cmake -E rm -f
+RM = "C:/Program Files/CMake/bin/cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/nickmarchuk/Documents/GitHub/me433_sandbox/hw2
+CMAKE_SOURCE_DIR = C:/Users/Charlie/Documents/GitHub/me433_github/hw3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/nickmarchuk/Documents/GitHub/me433_sandbox/hw2/build
+CMAKE_BINARY_DIR = C:/Users/Charlie/Documents/GitHub/me433_github/hw3/build
 
 # Utility rule file for bs2_default_bin.
 
@@ -69,8 +69,8 @@ include pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/progr
 pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin: pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
 
 pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin: pico-sdk/src/rp2_common/boot_stage2/bs2_default.elf
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/nickmarchuk/Documents/GitHub/me433_sandbox/hw2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating bs2_default.bin"
-	cd /Users/nickmarchuk/Documents/GitHub/me433_sandbox/hw2/build/pico-sdk/src/rp2_common/boot_stage2 && /opt/homebrew/bin/arm-none-eabi-objcopy -Obinary /Users/nickmarchuk/Documents/GitHub/me433_sandbox/hw2/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.elf /Users/nickmarchuk/Documents/GitHub/me433_sandbox/hw2/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:/Users/Charlie/Documents/GitHub/me433_github/hw3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating bs2_default.bin"
+	cd C:/Users/Charlie/Documents/GitHub/me433_github/hw3/build/pico-sdk/src/rp2_common/boot_stage2 && "C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/gcc-arm-none-eabi/bin/arm-none-eabi-objcopy.exe" -Obinary C:/Users/Charlie/Documents/GitHub/me433_github/hw3/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.elf C:/Users/Charlie/Documents/GitHub/me433_github/hw3/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
 
 bs2_default_bin: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin
 bs2_default_bin: pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
@@ -82,10 +82,10 @@ pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/build: bs2_de
 .PHONY : pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/build
 
 pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/clean:
-	cd /Users/nickmarchuk/Documents/GitHub/me433_sandbox/hw2/build/pico-sdk/src/rp2_common/boot_stage2 && $(CMAKE_COMMAND) -P CMakeFiles/bs2_default_bin.dir/cmake_clean.cmake
+	cd C:/Users/Charlie/Documents/GitHub/me433_github/hw3/build/pico-sdk/src/rp2_common/boot_stage2 && $(CMAKE_COMMAND) -P CMakeFiles/bs2_default_bin.dir/cmake_clean.cmake
 .PHONY : pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/clean
 
 pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/depend:
-	cd /Users/nickmarchuk/Documents/GitHub/me433_sandbox/hw2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/nickmarchuk/Documents/GitHub/me433_sandbox/hw2 /Users/nickmarchuk/me433/2024/pico/pico-sdk/src/rp2_common/boot_stage2 /Users/nickmarchuk/Documents/GitHub/me433_sandbox/hw2/build /Users/nickmarchuk/Documents/GitHub/me433_sandbox/hw2/build/pico-sdk/src/rp2_common/boot_stage2 /Users/nickmarchuk/Documents/GitHub/me433_sandbox/hw2/build/pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" C:/Users/Charlie/Documents/GitHub/me433_github/hw3 "C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2_common/boot_stage2" C:/Users/Charlie/Documents/GitHub/me433_github/hw3/build C:/Users/Charlie/Documents/GitHub/me433_github/hw3/build/pico-sdk/src/rp2_common/boot_stage2 C:/Users/Charlie/Documents/GitHub/me433_github/hw3/build/pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/depend
 
